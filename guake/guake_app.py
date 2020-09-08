@@ -537,9 +537,8 @@ class Guake(SimpleGladeApp):
         return False
 
     def window_event(self, window, event):
-        window_state = event.new_window_state
-        self.fullscreen_manager.set_window_state(window_state)
-        log.debug("Received window state event: %s", window_state)
+        state = event.new_window_state
+        log.debug("Received window state event: %s", state)
 
     def show_hide(self, *args):
         """Toggles the main window visibility
